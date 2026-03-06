@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
         {
             gameObject.transform.rotation = Quaternion.identity;
         }
+        if (gameObject.transform.position.y > 15 || gameObject.transform.position.y < 0) PlayerDeath();
     }
 
     public void PlayerDeath()
