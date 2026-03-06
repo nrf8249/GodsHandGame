@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlatformController : MonoBehaviour
 {
-    [SerializeField] public Player player;
+    [SerializeField] public GameObject player;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

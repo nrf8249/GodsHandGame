@@ -3,6 +3,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
+    //private float gravity = 4.81f; 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -13,6 +14,15 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
+        gameObject.transform.Translate(new Vector3(speed * Time.deltaTime, /*gravity * Time.deltaTime*/ 0, 0));
+        if (gameObject.transform.rotation.z != Quaternion.identity.z)
+        {
+            gameObject.transform.rotation = Quaternion.identity;
+        }
+    }
+
+    public void PlayerDeath()
+    {
+        Destroy(gameObject);
     }
 }

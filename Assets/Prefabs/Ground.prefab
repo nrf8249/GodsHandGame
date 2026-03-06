@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   groundPrefab: {fileID: 7827113224330559042}
+  obstaclePrefab: {fileID: 1556972075075864530, guid: 49a582881a8a5ff498b5dd820807908b, type: 3}
 --- !u!1 &7827113224330559042
 GameObject:
   m_ObjectHideFlags: 0

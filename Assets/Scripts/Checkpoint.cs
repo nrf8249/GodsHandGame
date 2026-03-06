@@ -3,6 +3,7 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
     [SerializeField] private GameObject groundPrefab;
+    [SerializeField] private GameObject obstaclePrefab;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,6 +19,11 @@ public class Checkpoint : MonoBehaviour
             Instantiate(groundPrefab,
                         new Vector3(groundPrefab.transform.position.x + 10,
                                     groundPrefab.transform.position.y,
+                                    0),
+                        Quaternion.identity);
+            Instantiate(obstaclePrefab, 
+                        new Vector3(groundPrefab.transform.position.x + 4.5f,
+                                    groundPrefab.transform.position.y + 5.33f,
                                     0),
                         Quaternion.identity);
         }
