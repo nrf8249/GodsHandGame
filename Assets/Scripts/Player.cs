@@ -23,6 +23,11 @@ public class Player : MonoBehaviour
 
     public void PlayerDeath()
     {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.GameOver();
+        }
+
         Destroy(gameObject);
     }
 }
