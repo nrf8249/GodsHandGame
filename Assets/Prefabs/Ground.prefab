@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1290254646771365151
+--- !u!1 &4315144727943932508
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4847563079459165098}
-  - component: {fileID: 6881900147517951770}
-  - component: {fileID: 4361930610752298226}
-  - component: {fileID: 7309991117947274384}
+  - component: {fileID: 4466135041264222584}
+  - component: {fileID: 7348460389754684067}
+  - component: {fileID: 286578938041471552}
+  - component: {fileID: 2888105201945386394}
   m_Layer: 0
-  m_Name: Checkpoint
+  m_Name: Checkpoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4847563079459165098
+--- !u!4 &4466135041264222584
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290254646771365151}
+  m_GameObject: {fileID: 4315144727943932508}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 0.1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.3, y: 1.004, z: 0}
+  m_LocalScale: {x: 0.046044003, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3156010307500498105}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6881900147517951770
+--- !u!212 &7348460389754684067
 SpriteRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290254646771365151}
+  m_GameObject: {fileID: 4315144727943932508}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -93,13 +93,13 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!61 &4361930610752298226
+--- !u!61 &286578938041471552
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290254646771365151}
+  m_GameObject: {fileID: 4315144727943932508}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -139,19 +139,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7309991117947274384
+--- !u!114 &2888105201945386394
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290254646771365151}
+  m_GameObject: {fileID: 4315144727943932508}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5bd2c1f29b21eb438af5b5d252198d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
   groundPrefab: {fileID: 7827113224330559042}
+  ceilingPrefab: {fileID: 8756180633171390170, guid: 19463d4bcdbfba64e9131414071935e5, type: 3}
   obstaclePrefab: {fileID: 1556972075075864530, guid: 49a582881a8a5ff498b5dd820807908b, type: 3}
 --- !u!1 &7827113224330559042
 GameObject:
@@ -180,11 +181,11 @@ Transform:
   m_GameObject: {fileID: 7827113224330559042}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalPosition: {x: 7.5, y: -5, z: 0}
+  m_LocalScale: {x: 25, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4847563079459165098}
+  - {fileID: 4466135041264222584}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5904726054138214237
