@@ -23,7 +23,7 @@ public class Checkpoint : MonoBehaviour
                                     0),
                         Quaternion.identity);
             Instantiate(ceilingPrefab,
-                        new Vector3(ceilingPrefab.transform.position.x + 25,
+                        new Vector3(groundPrefab.transform.position.x + 25,
                                     ceilingPrefab.transform.position.y,
                                     0),
                         Quaternion.identity);

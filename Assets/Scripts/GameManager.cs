@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     private Vector2 mousePos;
     private Vector2 worldPos;
 
+    public float energy = 100;
+    private float rate = 1;
+
     private void Awake()
     {
         if (Instance == null) Instance = this;
@@ -26,6 +29,15 @@ public class GameManager : MonoBehaviour
         worldPos = Camera.main.ScreenToWorldPoint(mousePos);
     }
 
+    void Update()
+    {
+        mousePos = Mouse.current.position.ReadValue();
+        worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+
+        EnergyMaintenance();
+        Debug.Log(energy);
+    }
+
     public void GameOver()
     {
         MenuManager.showGameOver = true;
@@ -35,11 +47,19 @@ public class GameManager : MonoBehaviour
 
     public void SpawnPlatform(InputAction.CallbackContext context)
     {
-        if (context.performed) platform = Instantiate(platformPrefab, worldPos, Quaternion.identity);
+        if (context.performed && energy > 30) platform = Instantiate(platformPrefab, worldPos, Quaternion.identity);
     }
 
     public void DespawnPlatform(InputAction.CallbackContext context)
     {
         if (context.canceled) Destroy(platform);
     }
+
+    public void EnergyMaintenance()
+    {
+        if (platform != null && energy > 0) energy -= rate;
+        else if (platform == null && energy <= 100) energy += rate;
+
+        if (energy <= 0) Destroy(platform);
+     }
 }
