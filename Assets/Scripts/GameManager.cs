@@ -7,13 +7,18 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     [SerializeField] private GameObject platformPrefab;
+    [SerializeField] private GameObject player;
     public GameObject platform;
 
     private Vector2 mousePos;
     private Vector2 worldPos;
 
     public float energy = 100;
-    private float rate = 1;
+    private float rate = .5f;
+
+    public float pointTotal = 0;
+    private float lastXPos = 0;
+    private float currentXPos;
 
     private void Awake()
     {
@@ -35,7 +40,8 @@ public class GameManager : MonoBehaviour
         worldPos = Camera.main.ScreenToWorldPoint(mousePos);
 
         EnergyMaintenance();
-        Debug.Log(energy);
+        PointMaintenance(false);
+        Debug.Log(energy + " "  + pointTotal);
     }
 
     public void GameOver()
@@ -61,5 +67,14 @@ public class GameManager : MonoBehaviour
         else if (platform == null && energy <= 100) energy += rate;
 
         if (energy <= 0) Destroy(platform);
-     }
+    }
+
+    public void PointMaintenance(bool coinCollected)
+    {
+        currentXPos = player.transform.position.x;
+        if (currentXPos > lastXPos) pointTotal += currentXPos - lastXPos;
+        lastXPos = currentXPos;
+
+        if (coinCollected) pointTotal += 20;
+    }
 }
