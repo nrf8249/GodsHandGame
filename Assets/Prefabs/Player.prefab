@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1366371019880182572}
   - component: {fileID: 8985569047329631172}
   - component: {fileID: 4763800537996947941}
+  - component: {fileID: 2501531264454612999}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -105,3 +106,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   speed: 5
+--- !u!111 &2501531264454612999
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6302115546873120031}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
