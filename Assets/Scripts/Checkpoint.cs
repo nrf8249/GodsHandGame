@@ -35,6 +35,10 @@ public class Checkpoint : MonoBehaviour
                                         0),
                             Quaternion.identity);
             }
+
+            // Works but throws errors when clearing the level for game reset
+            // Doesn't cause crash
+            //Destroy(gameObject);
         }
     }
 }

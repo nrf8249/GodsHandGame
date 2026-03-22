@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour
     private Vector2 worldPos;
 
     public float energy = 100;
-    private float rate = .5f;
+    
+    private float rate = 20f; // Amount of energy to lose per second
 
     public float pointTotal = 0;
     private float lastXPos = 0;
@@ -39,9 +40,9 @@ public class GameManager : MonoBehaviour
         mousePos = Mouse.current.position.ReadValue();
         worldPos = Camera.main.ScreenToWorldPoint(mousePos);
 
-        EnergyMaintenance();
+        EnergyMaintenance(Time.deltaTime);
         PointMaintenance(false);
-        Debug.Log(energy + " "  + pointTotal);
+        Debug.Log(energy + "\t-\t "  + pointTotal);
     }
 
     public void GameOver()
@@ -61,10 +62,10 @@ public class GameManager : MonoBehaviour
         if (context.canceled) Destroy(platform);
     }
 
-    public void EnergyMaintenance()
+    public void EnergyMaintenance(float deltaTime)
     {
-        if (platform != null && energy > 0) energy -= rate;
-        else if (platform == null && energy <= 100) energy += rate;
+        if (platform != null && energy > 0) energy -= (rate * deltaTime);
+        else if (platform == null && energy <= 100) energy += (rate * deltaTime);
 
         if (energy <= 0) Destroy(platform);
     }
