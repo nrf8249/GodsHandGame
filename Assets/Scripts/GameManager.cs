@@ -49,6 +49,8 @@ public class GameManager : MonoBehaviour
     {
         MenuManager.showGameOver = true;
 
+        MenuManager.lastScore = Mathf.FloorToInt(pointTotal);
+
         SceneManager.LoadScene("MenuScene");
     }
 

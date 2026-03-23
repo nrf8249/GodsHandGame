@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro; 
 
 public class MenuManager : MonoBehaviour
 {
@@ -7,7 +8,11 @@ public class MenuManager : MonoBehaviour
     public GameObject startMenuUI;
     public GameObject gameOverUI;
 
+    [Header("Game Over UI")]
+    public TextMeshProUGUI finalScoreText; 
+
     public static bool showGameOver = false;
+    public static int lastScore = 0; 
 
     void Start()
     {
@@ -15,6 +20,11 @@ public class MenuManager : MonoBehaviour
         {
             startMenuUI.SetActive(false);
             gameOverUI.SetActive(true);
+
+            if (finalScoreText != null)
+            {
+                finalScoreText.text = "Final Score: " + lastScore.ToString();
+            }
         }
         else
         {
@@ -27,13 +37,13 @@ public class MenuManager : MonoBehaviour
 
     public void PlayGame()
     {
-        showGameOver = false; 
-        SceneManager.LoadScene("GameRunning"); 
+        showGameOver = false;
+        SceneManager.LoadScene("GameRunning");
     }
 
     public void RestartGame()
     {
-        showGameOver = false; 
+        showGameOver = false;
         SceneManager.LoadScene("GameRunning");
     }
 }
