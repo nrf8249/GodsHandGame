@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
 
         EnergyMaintenance(Time.deltaTime);
         PointMaintenance(false);
-        Debug.Log(energy + "\t-\t "  + pointTotal);
+        // Debug.Log(energy + "\t-\t "  + pointTotal);
     }
 
     public void GameOver()

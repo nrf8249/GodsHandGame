@@ -153,7 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   groundPrefab: {fileID: 7827113224330559042}
   ceilingPrefab: {fileID: 8756180633171390170, guid: 19463d4bcdbfba64e9131414071935e5, type: 3}
-  obstaclePrefab: {fileID: 1556972075075864530, guid: 49a582881a8a5ff498b5dd820807908b, type: 3}
+  obstaclePrefab: {fileID: 3694442691697850188, guid: 0fb77ecb23932c5499382440dc8240f1, type: 3}
 --- !u!1 &7827113224330559042
 GameObject:
   m_ObjectHideFlags: 0
