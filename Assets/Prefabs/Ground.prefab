@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4315144727943932508}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3, y: 1.004, z: 0}
+  m_LocalPosition: {x: -0.478, y: 1.004, z: 0}
   m_LocalScale: {x: 0.046044003, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -154,14 +154,15 @@ MonoBehaviour:
   groundPrefab: {fileID: 7827113224330559042}
   ceilingPrefab: {fileID: 8756180633171390170, guid: 19463d4bcdbfba64e9131414071935e5, type: 3}
   obstaclePrefabs:
-  - {fileID: 8765624736927352292, guid: 00e845a266f471643ab669017519a435, type: 3}
-  - {fileID: 530805621132981162, guid: a9bd5c550054d804d9d0bf3d6baf4b93, type: 3}
-  - {fileID: 7987187752642958917, guid: 299f749c28615214c8178327778f6f38, type: 3}
-  - {fileID: 5213054893912133671, guid: f0ae1638b095a8d4d9a6fdfc65232b78, type: 3}
-  - {fileID: 1556972075075864530, guid: 49a582881a8a5ff498b5dd820807908b, type: 3}
   - {fileID: 4656762636272300840, guid: e97d772e6b0a4ce47bb68f1edb8783ae, type: 3}
   - {fileID: 2499830000065991617, guid: 13bd430ba3eb9954994057cb66a15c7d, type: 3}
-  - {fileID: 186321681706142959, guid: 4774734b8179e8d46b32fd51b56caa48, type: 3}
+  - {fileID: 1852136779570507919, guid: 8267a4b54946b7e4f80aae3897b3b3f8, type: 3}
+  - {fileID: 7753457702567494929, guid: 188e0dd98c93fab448ea713606ea83c8, type: 3}
+  - {fileID: 3781640119058367828, guid: de6fca19a08edda448389e139c5b56fe, type: 3}
+  - {fileID: 5476467922906999056, guid: b6b5302c89e13bf4db3413a21702e777, type: 3}
+  - {fileID: 5001768222660270183, guid: 1f62ba1006d633146bf7fe5ddcfa4953, type: 3}
+  - {fileID: 1942847488767608689, guid: f8eb844c3a489e14d89db062d56e3882, type: 3}
+  - {fileID: 1296800880144942198, guid: 24f638ed46238614a916d8a870e5adbb, type: 3}
 --- !u!1 &7827113224330559042
 GameObject:
   m_ObjectHideFlags: 0

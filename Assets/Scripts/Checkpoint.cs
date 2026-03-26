@@ -10,7 +10,6 @@ public class Checkpoint : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -28,13 +27,13 @@ public class Checkpoint : MonoBehaviour
                                     ceilingPrefab.transform.position.y,
                                     0),
                         Quaternion.identity);
-            for (int i = 0; i < 3; i++)
+            int randomNum = Random.Range(0, obstaclePrefabs.Count);
             {
-                //Instantiate(obstaclePrefab,
-                //            new Vector3(groundPrefab.transform.position.x + 4.5f + i,
-                //                        groundPrefab.transform.position.y + 5.33f,
-                //                        0),
-                //            Quaternion.identity);
+                Instantiate(obstaclePrefabs[randomNum],
+                            new Vector3(obstaclePrefabs[randomNum].transform.position.x + groundPrefab.transform.position.x,
+                                        obstaclePrefabs[randomNum].transform.position.y,
+                                        0),
+                            Quaternion.identity);
             }
 
             // Works but throws errors when clearing the level for game reset
