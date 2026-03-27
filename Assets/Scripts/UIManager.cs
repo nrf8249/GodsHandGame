@@ -96,5 +96,7 @@ public class UIManager : MonoBehaviour
     {
         float currentEnergy = GameManager.Instance.energy;
         energyBarFill.fillAmount = currentEnergy / maxEnergy;
+        if (energyBarFill.fillAmount > 0.3) energyBarFill.color = Color.green;
+        else energyBarFill.color = Color.red;
     }
 }
