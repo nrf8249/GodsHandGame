@@ -20,4 +20,9 @@ public class PlatformController : MonoBehaviour
         transform.position = worldPos;
 
     }
+
+    private void OlisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.collider.name);      
+    }
 }
