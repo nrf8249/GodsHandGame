@@ -20,11 +20,7 @@ public class Bullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log(collision.collider.name);
-        if (collision.collider.name == "Player")
-        {
-            // TODO - Make player lose a life
-
-        }
+        
         Destroy(gameObject);
 
     }
