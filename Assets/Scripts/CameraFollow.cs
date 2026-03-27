@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
@@ -13,6 +14,7 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (target != null) gameObject.transform.position = new Vector3(target.position.x + 4.5f, 4.5f, gameObject.transform.position.z);
+        Vector3 endPos = new Vector3(target.position.x + 4.5f, 4.5f, gameObject.transform.position.z);
+        if (target != null) gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, endPos, 1);
     }
 }

@@ -18,27 +18,24 @@ public class Checkpoint : MonoBehaviour
         {
             //collision.gameObject.transform.position = checkpoint.transform.position;
             Instantiate(groundPrefab,
-                        new Vector3(groundPrefab.transform.position.x + 25,
+                        new Vector3(groundPrefab.transform.position.x + groundPrefab.transform.localScale.x,
                                     groundPrefab.transform.position.y,
                                     0),
                         Quaternion.identity);
             Instantiate(ceilingPrefab,
-                        new Vector3(groundPrefab.transform.position.x + 25,
+                        new Vector3(groundPrefab.transform.position.x + groundPrefab.transform.localScale.x,
                                     ceilingPrefab.transform.position.y,
                                     0),
                         Quaternion.identity);
             int randomNum = Random.Range(0, obstaclePrefabs.Count);
             {
                 Instantiate(obstaclePrefabs[randomNum],
-                            new Vector3(obstaclePrefabs[randomNum].transform.position.x + groundPrefab.transform.position.x,
+                            new Vector3(groundPrefab.transform.position.x + groundPrefab.transform.localScale.x + 10,
                                         obstaclePrefabs[randomNum].transform.position.y,
                                         0),
                             Quaternion.identity);
             }
-
-            // Works but throws errors when clearing the level for game reset
-            // Doesn't cause crash
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 }

@@ -72,11 +72,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 138942351130147936, guid: 8267a4b54946b7e4f80aae3897b3b3f8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.0918617
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 138942351130147936, guid: 8267a4b54946b7e4f80aae3897b3b3f8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.4932165
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 138942351130147936, guid: 8267a4b54946b7e4f80aae3897b3b3f8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -112,7 +112,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1852136779570507919, guid: 8267a4b54946b7e4f80aae3897b3b3f8, type: 3}
       propertyPath: m_Name
-      value: SpikePrefab1 Variant
+      value: SpikePrefab2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535815385516244494, guid: 8267a4b54946b7e4f80aae3897b3b3f8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 7231562591968133764, guid: 8267a4b54946b7e4f80aae3897b3b3f8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

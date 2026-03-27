@@ -30,11 +30,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4769338288388245781, guid: 299f749c28615214c8178327778f6f38, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4769338288388245781, guid: 299f749c28615214c8178327778f6f38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4769338288388245781, guid: 299f749c28615214c8178327778f6f38, type: 3}
       propertyPath: m_LocalPosition.z
@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7987187752642958917, guid: 299f749c28615214c8178327778f6f38, type: 3}
       propertyPath: m_Name
-      value: Coin_Increase Variant
+      value: Coin_Decrease
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
