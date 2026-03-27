@@ -18,9 +18,12 @@ public class Obstacle : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player hit an obstacle!");
-            collision.gameObject.GetComponent<Player>().PlayerDeath();
-            // You can add additional logic here, such as reducing player health or triggering a game over.
+            Player playerScript = collision.gameObject.GetComponent<Player>();
+
+            if (playerScript != null)
+            {
+                playerScript.TakeDamage();
+            }
         }
     }
 }

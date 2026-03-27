@@ -14,7 +14,12 @@ public class UIManager : MonoBehaviour
 
     [Header("Onboarding")]
     public GameObject[] tutorialSteps; 
-    private int currentStepIndex = 0;  
+    private int currentStepIndex = 0;
+
+    [Header("Lives UI")]
+    public Image[] heartImages;       
+    public Sprite fullHeartSprite;      
+    public Sprite emptyHeartSprite;
 
     private float maxEnergy = 100f;
     private bool isOnboarding = true;
@@ -98,5 +103,23 @@ public class UIManager : MonoBehaviour
         energyBarFill.fillAmount = currentEnergy / maxEnergy;
         if (energyBarFill.fillAmount > 0.3) energyBarFill.color = Color.green;
         else energyBarFill.color = Color.red;
+    }
+
+    public void UpdateHearts(int currentLives)
+    {
+        for (int i = 0; i < heartImages.Length; i++)
+        {
+            if (heartImages[i] != null)
+            {
+                if (i < currentLives)
+                {
+                    heartImages[i].sprite = fullHeartSprite;
+                }
+                else
+                {
+                    heartImages[i].sprite = emptyHeartSprite;
+                }
+            }
+        }
     }
 }
